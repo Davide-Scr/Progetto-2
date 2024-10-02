@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Netflix</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark text-white">
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo" height="30">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Accesso</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2 bg-dark text-white border-light" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+                <div class="d-flex ms-3">
+                    <a href="#" class="text-white me-3"><i class="fas fa-bell"></i></a>
+                    <a href="#" class="text-white"><i class="fas fa-user"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <div class="hero-banner position-relative text-center text-white">
+        <img src="https://cdn.animesaturn.cx/static/images/banner/OnePieceEgg.png" class="img-fluid" alt="Hero Image">
+        <div class="overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+            <div class="hero-content">
+                <h1 class="display-4">Guarda Adesso One Piece</h1>
+                <p class="lead">Guarda le ultime avventure di Luffy Cappello di Paglia e compagni!</p>
+                <a href="https://www.animesaturn.cx/watch?file=eebNLa6x3Geu" class="btn btn-danger btn-lg me-3">
+                    <i class="fas fa-play"></i> Ultimo Episodio
+                </a>
+                <a href="https://www.animesaturn.cx/anime/One-Piece-a" class="btn btn-secondary btn-lg">
+                    <i class="fas fa-info-circle"></i> Info
+                </a>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Content Sections -->
+    <div class="container mt-5">
+        <h3 class="mb-3">Trending Now</h3>
+        <div class="row flex-row flex-nowrap overflow-auto">
+            <div class="col-2"><a href="https://streamingcommunity.computer/titles/7246-la-creatura-di-gyeongseong"><img src="https://preview.redd.it/3n2vql26zz1c1.jpg?auto=webp&s=981b4e724461629297820c816cd43a9011967f9b" class="img-fluid" alt="Movie 1"></a></div>
+            <div class="col-2"><a href="https://streamingcommunity.computer/titles/8954-trigger-warning"><img src="https://images.plex.tv/photo?size=large-1280&url=https%3A%2F%2Fmetadata-static.plex.tv%2F2%2Fgracenote%2F21f0fb10531a8a124e8b88a236305687.jpg" class="img-fluid" alt="Movie 2"></a></div>
+            <div class="col-2"><a href="https://streamingcommunity.computer/titles/9795-beetlejuice-beetlejuice"><img src="https://i0.wp.com/www.cinemaaquila.it/images/2024/08/locandinapg2.jpg?fit=420%2C622&ssl=1" class="img-fluid" alt="Movie 3"></a></div>
+            <div class="col-2"><a href="https://streamingcommunity.computer/titles/8588-the-penguin"><img src="https://m.media-amazon.com/images/M/MV5BYmU3MzYzOWEtOTdkZi00YzA1LTliMzQtNDdiZDBjY2FiNmFlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" class="img-fluid" alt="Movie 4"></a></div>
+            <div class="col-2"><a href="https://streamingcommunity.computer/titles/9796-it-ends-with-us-siamo-noi-a-dire-basta"><img src="https://m.media-amazon.com/images/M/MV5BYzM2NGMzNGQtZjNhMi00MTVkLTg2ZGQtN2M4OTllYzU1Y2Y0XkEyXkFqcGc@._V1_.jpg" class="img-fluid" alt="Movie 5"></a></div>
+            <div class="col-2"><a href="https://streamingcommunity.computer/titles/6004-tulsa-king"><img src="https://m.media-amazon.com/images/M/MV5BMjBiNmI3YjMtNjJmNi00MTdiLTg5YTItMTk1MjcwOWIyZjY3XkEyXkFqcGc@._V1_.jpg" class="img-fluid" alt="Movie 6"></a></div>
+        </div>
+
+        <h3 class="mb-3 mt-5">Top Picks For You</h3>
+        <div class="row flex-row flex-nowrap overflow-auto">
+            <div class="col-2"><a href="https://www.animesaturn.cx/anime/Bleach"><img src="https://m.media-amazon.com/images/M/MV5BOWQwOWY5NTUtMjAyZi00YjQzLTkwODgtNmQwZjU1MGIzZDhjXkEyXkFqcGc@._V1_.jpg" class="img-fluid" alt="Bleach"></a></div>
+            <div class="col-2"><a href="https://streamingcommunity.computer/titles/5367-bullet-train"><img src="https://www.sonypictures.it/sites/italy/files/2022-09/DP_6702633_TC_1400x2100_DP_6702629_BulletTrain_EST_2000x3000_1333x2000_thumbnail.jpg" class="img-fluid" alt="Movie 8"></a></div>
+            <div class="col-2"><a href="https://streamingcommunity.computer/titles/83-peaky-blinders"><img src="https://i.ebayimg.com/00/s/MTYwMFgxMDY2/z/NXgAAOSwLw9imFHR/$_57.JPG?set_id=880000500F" class="img-fluid" alt="Movie 9"></a></div>
+            <div class="col-2"><a href="https://www.animesaturn.cx/anime/Chainsaw-Man"><img src="https://cdn.animesaturn.cx/static/images/locandine/c6827c0c18d3d99fe635177fb28f618f1659084350_main.png" class="img-fluid" alt="Movie 10"></a></div>
+            <div class="col-2"><a href="https://www.animesaturn.cx/anime/Blue-Giant-ITA"><img src="https://preview.redd.it/vko20diq5fta1.jpg?auto=webp&s=7d49f43e6074febc8310e4788260e8f47cf699a1" class="img-fluid" alt="Movie 11"></a></div>
+            <div class="col-2"><a href="https://streamingcommunity.computer/titles/6239-spider-man-across-the-spider-verse"><img src="https://cshschronicle.com/wp-content/uploads/2023/06/synopsis_poster.jpg" class="img-fluid" alt="Movie 12"></a></div>
+        </div>
+</body>
+</html>
