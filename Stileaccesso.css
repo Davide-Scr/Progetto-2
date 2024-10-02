@@ -1,0 +1,17 @@
+body {
+    background-color: #141414;
+}
+
+.card {
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+}
+
+input::placeholder {
+    color: #bbb;
+}
+
+input:focus {
+    box-shadow: none;
+    outline: none;
+}
