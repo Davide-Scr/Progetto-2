@@ -59,74 +59,24 @@
 
     <!-- Content Sections -->
     <div class="container mt-5">
-        <!-- Trending Now Section -->
         <h3 class="mb-3">Trending Now</h3>
         <div class="row flex-row flex-nowrap overflow-auto">
-            <div class="col-2">
-                <a href="https://www.example.com/movie1">
-                    <img src="https://via.placeholder.com/200x300" class="img-fluid" alt="Movie 1">
-                </a>
-            </div>
-            <div class="col-2">
-                <a href="https://www.example.com/movie2">
-                    <img src="https://via.placeholder.com/200x300" class="img-fluid" alt="Movie 2">
-                </a>
-            </div>
-            <div class="col-2">
-                <a href="https://www.example.com/movie3">
-                    <img src="https://via.placeholder.com/200x300" class="img-fluid" alt="Movie 3">
-                </a>
-            </div>
-            <div class="col-2">
-                <a href="https://www.example.com/movie4">
-                    <img src="https://via.placeholder.com/200x300" class="img-fluid" alt="Movie 4">
-                </a>
-            </div>
-            <div class="col-2">
-                <a href="https://www.example.com/movie5">
-                    <img src="https://via.placeholder.com/200x300" class="img-fluid" alt="Movie 5">
-                </a>
-            </div>
-            <div class="col-2">
-                <a href="https://www.example.com/movie6">
-                    <img src="https://via.placeholder.com/200x300" class="img-fluid" alt="Movie 6">
-                </a>
-            </div>
+            <div class="col-2"><a href="#"><img src="https://via.placeholder.com/200x300" class="img-fluid" alt="Movie 1"></a></div>
+            <div class="col-2"><a href="#"><img src="https://via.placeholder.com/200x300" class="img-fluid" alt="Movie 2"></a></div>
+            <div class="col-2"><a href="#"><img src="https://via.placeholder.com/200x300" class="img-fluid" alt="Movie 3"></a></div>
+            <div class="col-2"><a href="#"><img src="https://via.placeholder.com/200x300" class="img-fluid" alt="Movie 4"></a></div>
+            <div class="col-2"><a href="#"><img src="https://via.placeholder.com/200x300" class="img-fluid" alt="Movie 5"></a></div>
+            <div class="col-2"><a href="#"><img src="https://via.placeholder.com/200x300" class="img-fluid" alt="Movie 6"></a></div>
         </div>
 
-        <!-- Top Picks Section -->
         <h3 class="mb-3 mt-5">Top Picks For You</h3>
         <div class="row flex-row flex-nowrap overflow-auto">
-            <div class="col-2">
-                <a href="https://www.example.com/movie7">
-                    <img src="https://via.placeholder.com/200x300" class="img-fluid" alt="Movie 7">
-                </a>
-            </div>
-            <div class="col-2">
-                <a href="https://www.example.com/movie8">
-                    <img src="https://via.placeholder.com/200x300" class="img-fluid" alt="Movie 8">
-                </a>
-            </div>
-            <div class="col-2">
-                <a href="https://www.example.com/movie9">
-                    <img src="https://via.placeholder.com/200x300" class="img-fluid" alt="Movie 9">
-                </a>
-            </div>
-            <div class="col-2">
-                <a href="https://www.example.com/movie10">
-                    <img src="https://via.placeholder.com/200x300" class="img-fluid" alt="Movie 10">
-                </a>
-            </div>
-            <div class="col-2">
-                <a href="https://www.example.com/movie11">
-                    <img src="https://via.placeholder.com/200x300" class="img-fluid" alt="Movie 11">
-                </a>
-            </div>
-            <div class="col-2">
-                <a href="https://www.example.com/movie12">
-                    <img src="https://via.placeholder.com/200x300" class="img-fluid" alt="Movie 12">
-                </a>
-            </div>
+            <div class="col-2"><a href="#"><img src="https://via.placeholder.com/200x300" class="img-fluid" alt="Movie 7"></a></div>
+            <div class="col-2"><a href="#"><img src="https://via.placeholder.com/200x300" class="img-fluid" alt="Movie 8"></a></div>
+            <div class="col-2"><a href="#"><img src="https://via.placeholder.com/200x300" class="img-fluid" alt="Movie 9"></a></div>
+            <div class="col-2"><a href="#"><img src="https://via.placeholder.com/200x300" class="img-fluid" alt="Movie 10"></a></div>
+            <div class="col-2"><a href="#"><img src="https://via.placeholder.com/200x300" class="img-fluid" alt="Movie 11"></a></div>
+            <div class="col-2"><a href="#"><img src="https://via.placeholder.com/200x300" class="img-fluid" alt="Movie 12"></a></div>
         </div>
 
         <!-- Movies Section -->
@@ -138,48 +88,34 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     
     <script>
-        const moviesData = [
-            {
-                "title": "The Grudge",
-                "year": 2020,
-                "cast": [
-                    "Andrea Riseborough",
-                    "Demián Bichir",
-                    "John Cho",
-                    "Betty Gilpin",
-                    "Lin Shaye",
-                    "Jacki Weaver"
-                ],
-                "genres": [
-                    "Horror",
-                    "Supernatural"
-                ],
-                "href": "The_Grudge_(2020_film)",
-                "extract": "The Grudge is a 2020 American psychological supernatural horror film written and directed by Nicolas Pesce. Originally announced as a reboot of the 2004 American remake and the original 2002 Japanese horror film Ju-On: The Grudge...",
-                "thumbnail": "https://upload.wikimedia.org/wikipedia/en/3/34/The_Grudge_2020_Poster.jpeg",
-                "thumbnail_width": 220,
-                "thumbnail_height": 326
-            }
-            // Puoi aggiungere altri film qui
-        ];
+        // Fetch movie data from JSON file
+        fetch('Film.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const moviesContainer = document.getElementById('movies-container');
 
-        const moviesContainer = document.getElementById('movies-container');
+                data.forEach(movie => {
+                    const movieCol = document.createElement('div');
+                    movieCol.className = 'col-2 mb-3';
 
-        moviesData.forEach(movie => {
-            const movieCol = document.createElement('div');
-            movieCol.className = 'col-2 mb-3';
-            
-            movieCol.innerHTML = `
-                <a href="${movie.href}" target="_blank">
-                    <img src="${movie.thumbnail}" class="img-fluid" alt="${movie.title}">
-                    <h5>${movie.title} (${movie.year})</h5>
-                    <p>${movie.genres.join(', ')}</p>
-                    <p>${movie.extract.substring(0, 100)}...</p>
-                </a>
-            `;
-            
-            moviesContainer.appendChild(movieCol);
-        });
+                    movieCol.innerHTML = `
+                        <a href="${movie.href}.html" target="_blank">
+                            <img src="${movie.thumbnail}" class="img-fluid" alt="${movie.title}">
+                            <h5>${movie.title} (${movie.year})</h5>
+                            <p>${movie.genres.join(', ')}</p>
+                            <p>${movie.extract.substring(0, 100)}...</p>
+                        </a>
+                    `;
+
+                    moviesContainer.appendChild(movieCol);
+                });
+            })
+            .catch(error => console.error('Error loading the movies:', error));
     </script>
 </body>
 </html>
